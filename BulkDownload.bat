@@ -3,19 +3,22 @@ echo Hi
 pause
 cls
 
-curl -L -o CollectUserData.bat https://raw.githubusercontent.com/BlakeeBobz/windows.bat/main/CollectUserData.bat
+:: Enable TLS 1.2 in PowerShell 5.1
+powershell -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12"
+
+powershell -Command "& {Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/BlakeeBobz/windows.bat/main/CollectUserData.bat' -OutFile 'CollectUserData.bat' -Headers @{'User-Agent'='Mozilla/5.0'} -UseBasicParsing}"
 echo Downloaded CollectUserData.bat.
 
-curl -L -o Echo.bat https://raw.githubusercontent.com/BlakeeBobz/windows.bat/main/Echo.bat
+powershell -Command "& {Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/BlakeeBobz/windows.bat/main/Echo.bat' -OutFile 'Echo.bat' -Headers @{'User-Agent'='Mozilla/5.0'} -UseBasicParsing}"
 echo Downloaded Echo.bat.
 
-curl -L -o GetInputAsVariable.bat https://raw.githubusercontent.com/BlakeeBobz/windows.bat/main/GetInputAsVariable.bat
+powershell -Command "& {Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/BlakeeBobz/windows.bat/main/GetInputAsVariable.bat' -OutFile 'GetInputAsVariable.bat' -Headers @{'User-Agent'='Mozilla/5.0'} -UseBasicParsing}"
 echo Downloaded GetInputAsVariable.bat.
 
-curl -L -o GetName.bat https://raw.githubusercontent.com/BlakeeBobz/windows.bat/main/GetName.bat
+powershell -Command "& {Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/BlakeeBobz/windows.bat/main/GetName.bat' -OutFile 'GetName.bat' -Headers @{'User-Agent'='Mozilla/5.0'} -UseBasicParsing}"
 echo Downloaded GetName.bat.
 
-curl -L -o RandomNumber.bat https://raw.githubusercontent.com/BlakeeBobz/windows.bat/main/RandomNumber.bat
+powershell -Command "& {Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/BlakeeBobz/windows.bat/main/RandomNumber.bat' -OutFile 'RandomNumber.bat' -Headers @{'User-Agent'='Mozilla/5.0'} -UseBasicParsing}"
 echo Downloaded RandomNumber.bat.
 
 pause
