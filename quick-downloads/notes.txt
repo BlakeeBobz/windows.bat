@@ -1,10 +1,9 @@
 hi
 this folder is
-ALL
+full of
+.zip files
+containing
 the .bat
 files from the
 BEGINNING OF TIME
-to
-March 20th
-
-bye bye :)
+to the file's name!
